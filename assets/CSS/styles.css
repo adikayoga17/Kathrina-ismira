@@ -125,6 +125,7 @@ button{
 .section-title{
     font-size: var(--h2-font-size);
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .section-title span{
@@ -133,6 +134,7 @@ button{
 
 .section-subtitle{
     display: block;
+    text-align: center;
     font-size: var(--small-font-size);
     color: var(--second-color);
 }
@@ -424,28 +426,33 @@ button{
 }
 
 .about-profile{
-    display: flex;
+    /* display: flex; */
+    border: 2px solid var(--first-color);
+    border-radius: 7.25rem;
+    width: 270px;
+    height: 360px;
     position: relative;
-    justify-content: center;
+    place-items: center;
+    justify-self: center;
     margin-block: 2.5rem 4.5rem;
 }
 
 .about-image{
     background-color: var(--first-color);
-    border: 5px solid var(--first-color-light);
-    border-radius: 7rem;
-    width: 220px;
-    height: 350px;
+    /* border: 5px solid var(--first-color-light); */
+    border-radius: 6.5rem;
+    /* display: flex; */
+    overflow: hidden;
+    width: 240px;
+    height: 330px;
 }
 
 .about-img{
     position: relative;
     /* margin-top: 1rem; */
-    top: 1.5rem;
-    width: 220px;
+    top: 2rem;
+    /* width: 5000px; */
     text-align: center;
-    border-bottom-left-radius: 6rem;
-    border-bottom-right-radius: 6rem;
     /* border: 3px solid var(--first-color); */
     z-index: 1;
 }
@@ -659,4 +666,85 @@ button{
 
 .testimonial-star{
     color: var(--first-color);
+}
+
+/*=============== CONTACT ===============*/
+.contact .section-subtitle{
+    margin-bottom: 2rem;
+}
+.contact-container{
+    row-gap: 3rem;
+}
+
+.contact-info,
+.contact-data{
+    display: grid;
+}
+
+.contact-info{
+    row-gap: 1rem;
+}
+
+.contact-data{
+    row-gap: .5rem;
+}
+
+.contact-data-title{
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
+.contact-data-info{
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+}
+
+.contact-button{
+    width: max-content;
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+}
+
+.contact-button i{
+    font-size: 1rem;
+    transition: transform .3s;
+}
+
+.contact-button:hover i{
+    transform: translateX(.25rem);
+}
+
+.contact-profile{
+    display: grid;
+    position: relative;
+    width: 200px;
+    height: 290px;
+    background-color: var(--body-color);
+    border: 2px solid var(--first-color);
+    justify-content: center;
+    justify-self: center;
+    border-radius: 14px;
+    place-items: center;
+}
+
+.contact-images{
+    width: 170px;
+    height: 260px;
+    background: linear-gradient(180deg, 
+                hsla(206, 21%, 72%, 0),
+                hsla(206, 66%, 53%, 1));
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-images img{
+    max-width: none;
+    width: 200px;
+    margin-top: 1rem;
 }
