@@ -424,41 +424,32 @@ button{
 }
 
 .about-profile{
+    display: flex;
     position: relative;
-    justify-self: center;
+    justify-content: center;
     margin-block: 2.5rem 4.5rem;
 }
 
 .about-image{
+    background-color: var(--first-color);
+    border: 5px solid var(--first-color-light);
+    border-radius: 7rem;
     width: 220px;
+    height: 350px;
 }
 
 .about-img{
     position: relative;
+    /* margin-top: 1rem; */
+    top: 1.5rem;
+    width: 220px;
+    text-align: center;
+    border-bottom-left-radius: 6rem;
+    border-bottom-right-radius: 6rem;
     /* border: 3px solid var(--first-color); */
     z-index: 1;
 }
 
-.about-shadow-1{
-    position: absolute;
-    width: 150px;
-    height: 370px;
-    /* opacity: .5; */
-    background-color: hsla(206, 66%, 47%, .5);
-    top: -2.5rem;
-    right: -2.5rem;
-    border-bottom: 4px solid var(--first-color);
-}
-.about-shadow-2{
-    position: absolute;
-    width: 370px;
-    height: 150px;
-    /* opacity: .5; */
-    background-color: hsla(206, 66%, 47%, .5);
-    top: 2.5rem;
-    left: -2.5rem;
-    border-bottom: 4px solid var(--first-color);
-}
 
 /*=============== SERVICES ===============*/
 .service-container{
