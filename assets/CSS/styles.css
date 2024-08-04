@@ -45,7 +45,18 @@
 }
 
 /* Responsive typography */
-
+@media screen and (min-width: 968px){
+    :root{
+        --biggest-font-size: 2.5rem;
+        --big-font-size: 2.25rem;
+        --h1-font-size: 2rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+    }
+}
 
 /*========== BASE ==========*/
 *{
@@ -480,6 +491,9 @@ button{
     /* margin: 0 .5rem; */
 }
 
+.service-grid{
+    gap: 2rem;
+}
 .service-card{
     position: relative;
     transition: transform .4s;
@@ -573,6 +587,11 @@ button{
     margin-bottom: 1.5rem;
 }
 
+.value-content{
+    display: grid;
+    gap: 2rem;
+    flex-direction: column;
+}
 .value-check{
     margin-bottom: 2rem;
 }
@@ -589,7 +608,7 @@ button{
     display: grid;
     margin-inline: auto;
     grid-template-columns: repeat(2, 150px);
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .value-card-data{
@@ -627,7 +646,7 @@ button{
 /*=============== Testimonial ===============*/
 .testimonial :is(.section-title, .section-subtitle){
     text-align: center;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
 }
 
 .testimonial .section-subtitle{
@@ -852,4 +871,365 @@ button{
 /* show scroll */
 .show-scroll{
     bottom: 7rem;
+}
+
+@media screen and (min-width: 567px){
+    .home-circle:nth-child(2){
+        top: 2rem;
+        right: 8.5rem;
+        opacity: .2;
+    }
+    .home-circle:nth-child(3){
+        top: 1rem;
+        right: 6.5rem;
+        opacity: .1;
+    }
+    .about-title{
+        justify-content: space-between;
+    }
+    .about-title .section-subtitle{
+        max-width: 300px;
+    }
+    .service-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 767px){
+    .container{
+        margin-inline: 2rem;
+    }
+    .section{
+        padding: 6rem 0 1rem;
+    }
+    .nav{
+        height: calc(var(--header-height) + .5rem);
+        justify-content: space-between;
+    }
+    .nav-content{
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+    .nav-list{
+        display: flex;
+        column-gap: 3rem;
+    }
+    .nav-link i{
+        display: none;
+    }
+    .nav-link{
+        display: block;
+        color: var(--text-color);
+        transition: color .3s;
+    }
+    .nav-link:hover{
+        color: var(--first-color);
+    }
+    .nav-link{
+        font-weight: var(--font-medium);
+    }
+    
+    .home-container{
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 5rem;
+    }
+    .home-data{
+        margin-left: 1rem;
+    }
+    .home-circle{
+        width: 220px;
+        height: 220px;
+    }
+    .home-circle:nth-child(1){
+        top: 3rem;
+    }
+    .home-circle:nth-child(2){
+        top: 1.5rem;
+        right: 1rem;
+    }
+    .home-circle:nth-child(3){
+        top: .5rem;
+        right: -1rem;
+    }
+    .home-img{
+        width: 280px;
+        top: 2rem;
+    }
+    .home-value{
+        bottom: -2.7rem;
+        left: 5rem;
+        right: 5rem;
+        padding-inline: 3rem;
+    }
+    .home-value-data{
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        gap: .5rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-icon{
+        display: block;
+        font-size: 1rem;
+        padding: .5rem;
+        background-color: var(--first-color);
+        border-radius: 50%;
+        color: white;
+    }
+
+    .btn-clear{
+        padding-block: .4rem;
+    }
+
+    /* about */
+    .about-title{
+        margin-inline: 4rem;
+    }
+    .section-title{
+        font-size: 1.5rem;
+    }
+    .about-title .section-subtitle{
+        max-width: 300px;
+        font-size: 1rem;   
+    }
+    .about-data{
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Services */
+    .services-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .service-subtitle{
+        margin-inline: 4rem;
+    }
+
+    /* Value */
+    .value-title-section{
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 200px 450px;
+    }
+    .value-content{
+        margin-inline: 3rem;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-container{
+        grid-template-columns: repeat(2, 1fr);
+        margin-inline: 8rem;
+        margin-bottom: 5rem;
+    }
+
+    /* footer */
+    .footer-container{
+        margin: 0;
+        padding-bottom: 2rem;
+    }
+    .footer-copy{
+        margin-top: 3rem;
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+    .section{
+        padding-block: 7rem 2rem;
+    }
+    .nav{
+        height: calc(var(--header-height) + 2rem);
+    }
+    .nav-content{
+        padding-top: 2rem;
+    }
+
+    .home{
+        padding-block: 7rem 0;
+    }
+    .home-container{
+        padding-top: .5rem;
+        margin-inline: 7rem;
+    }
+
+    .home-circle{
+        width: 300px;
+        height: 300px;
+    }
+    .home-circle:nth-child(1){
+        top: 5rem;
+    }
+    .home-circle:nth-child(2){
+        top: 3rem;
+        right: 1rem;
+    }
+    .home-circle:nth-child(3){
+        top: 1.5rem;
+        right: -1rem;
+    }
+    .home-img{
+        width: 360px;
+    }
+
+    .home-value{
+        left: 0;
+        right: 0;
+        margin-inline: 5rem;
+        bottom: -2rem;
+    }
+
+    .about-profile{
+        width: 370px;
+        height: 520px;
+        border-radius: 11rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-image{
+        overflow: hidden;
+        border-radius: 10rem;
+        width: 330px;
+        height: 470px;
+    }
+    .about-img{
+        max-width: none;
+        top: -.5rem;
+        right: 2rem;
+        width: 400px;
+        
+    }
+
+    .service-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .value-title-section{
+        margin-inline: inherit;
+    }
+
+    .contact-container{
+        margin-inline: 12rem;
+    }
+
+    .contact-profile{
+        width: 300px;
+        height: 400px;
+    }
+    .contact-images{
+        width: 270px;
+        height: 370px;
+    }
+    .contact-images img{
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .container{
+        margin-inline: auto;
+    }
+
+    .section-title{
+        font-size: var(--h1-font-size);
+    }
+
+    .about-title .section-subtitle{
+        font-size: var(--h3-font-size) !important;
+        max-width: 400px;
+    }
+
+    .home-circle{
+        width: 300px;
+        height: 300px;
+    }
+    .home-circle:nth-child(1){
+        top: 5rem;
+    }
+    .home-circle:nth-child(2){
+        top: 3rem;
+        right: 5rem;
+    }
+    .home-circle:nth-child(3){
+        top: 2rem;
+        right: 2.5rem;
+    }
+    .home-img{
+        width: 360px;
+    }
+
+    .home-value{
+        margin-inline: 10rem;
+        justify-content: center;
+        gap: 7rem;
+    }
+
+    .about-title{
+        margin-inline: 10rem;
+    }
+
+    .about-description{
+        max-width: 500px;
+        font-size: var(--h3-font-size);
+    }
+
+    .about-buttons{
+        justify-content: flex-start;
+    }
+    .about-buttons .button{
+        padding: 1rem 2rem;
+    }
+    .about-btn{
+        padding: .5rem .7rem;
+    }
+
+    .services-title{
+        margin-inline: 10rem;
+    }
+    .service-subtitle{
+        font-size: var(--h3-font-size);
+        margin-inline: 1rem;
+    }
+
+    .value-title-section{
+        margin-inline: 10rem;
+        grid-template-columns: repeat(200px, 800px);
+        margin-bottom: 2rem;
+    }
+    .value-description{
+        font-size: var(--h3-font-size);
+        max-width: 500px;
+    }
+    .value-data .button{
+        padding: 1.2rem 3rem;
+    }
+    .value-content{
+        justify-items: center;
+        margin-inline: 7rem;
+    }
+    .value-data-check{
+        font-size: var(--h2-font-size);
+    }
+    .testimonial-container{
+        overflow-x: hidden;
+    }
+
+    .contact-container{
+        margin-inline: 17rem;
+    }
+
+    .footer{
+        background-color: var(--first-color-opacity);
+        margin: 0;
+    }
+    .footer-container{
+        background-color: transparent;
+    }
 }
